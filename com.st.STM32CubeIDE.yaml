@@ -54,23 +54,23 @@ modules:
     buildsystem: simple
     build-commands:
       - mkdir ${FLATPAK_DEST}/stm32cubeide
-      - chmod +x st-stlink-server.2.1.0-1-linux-amd64.install.sh
-      - ./st-stlink-server.2.1.0-1-linux-amd64.install.sh --tar -xvf
+      - chmod +x st-stlink-server.2.1.1-1-linux-amd64.install.sh
+      - ./st-stlink-server.2.1.1-1-linux-amd64.install.sh --tar -xvf
       - mv stlink-server ${FLATPAK_DEST}/bin/stlink-server
-      - chmod +x st-stm32cubeide_1.13.1_17479_20230728_0839_amd64.sh
-      - ./st-stm32cubeide_1.13.1_17479_20230728_0839_amd64.sh --tar -xvf
-      - tar -xzvf st-stm32cubeide_1.13.1_17479_20230728_0839_amd64.tar.gz -C ${FLATPAK_DEST}/stm32cubeide/
+      - chmod +x st-stm32cubeide_1.14.0_19471_20231121_1200_amd64.sh
+      - ./st-stm32cubeide_1.14.0_19471_20231121_1200_amd64.sh --tar -xvf
+      - tar -xzvf st-stm32cubeide_1.14.0_19471_20231121_1200_amd64.tar.gz -C ${FLATPAK_DEST}/stm32cubeide/
       - install -D icon.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
       - install -t ${FLATPAK_DEST}/share/applications/ -Dm644 com.st.STM32CubeIDE.desktop
       - install -t ${FLATPAK_DEST}/share/appdata/ -Dm644 com.st.STM32CubeIDE.metainfo.xml
       - install -t ${FLATPAK_DEST}/bin -Dm755 stm32cubeide
     sources:
       - type: archive
-        url: https://www.st.com/content/ccc/resource/technical/software/sw_development_suite/group0/78/92/66/01/21/f2/4c/65/stm32cubeide-lnx/files/st-stm32cubeide_1.13.1_17479_20230728_0839_amd64.sh.zip/jcr:content/translations/en.st-stm32cubeide_1.13.1_17479_20230728_0839_amd64.sh.zip
-        sha256: 6630cf3995515d2e416377dde4ae383a32ecab7fa074fcb116a13d9fd8e6ebc9
+        url: https://www.st.com/content/ccc/resource/technical/software/sw_development_suite/group0/d5/ca/d8/d4/64/90/42/e1/stm32cubeide-lnx/files/st-stm32cubeide_1.14.0_19471_20231121_1200_amd64.sh.zip/jcr:content/translations/en.st-stm32cubeide_1.14.0_19471_20231121_1200_amd64.sh.zip
+        sha256: cdd131fcaa3781ed3695bce315ee064e3a50cd971869d27b39c99f8d8e77f7cc
       - type: archive
-        url: https://www.st.com/content/ccc/resource/technical/software/sw_development_suite/group0/09/9f/79/67/ed/f9/45/d0/st-link-server_v2-1-0/files/st-link-server_v2-1-0.zip/jcr:content/translations/en.st-link-server_v2-1-0.zip
-        sha256: 135d924b303b8838b45fe5078def02037502f93023520f6003690fb754a1e123
+        url: https://www.st.com/content/ccc/resource/technical/software/sw_development_suite/group0/98/41/e8/53/44/80/41/92/st-link-server-v2-1-1/files/st-link-server-v2-1-1.zip/jcr:content/translations/en.st-link-server-v2-1-1.zip
+        sha256: a84a0ada7c9b6343e559dacd37e42a815c500d0f4a517db3d1e511d056903bf6
       - type: file
         path: com.st.STM32CubeIDE.metainfo.xml
       - type: file
